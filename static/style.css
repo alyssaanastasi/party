@@ -85,7 +85,7 @@ main {
 
 /* Banner Image */
 .invitation-banner img {
-    width: 50%;
+    width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
