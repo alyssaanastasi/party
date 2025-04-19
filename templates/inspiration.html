@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Inspiration Gallery{% endblock %}
+{% block content %}
+<section class="gallery">
+    <h2>Inspiration Vibes ✨</h2>
+    <img src="{{ url_for('static', filename='images/inspo1.jpg') }}" alt="inspo1">
+    <img src="{{ url_for('static', filename='images/inspo2.jpg') }}" alt="inspo2">
+    <img src="{{ url_for('static', filename='images/inspo3.jpg') }}" alt="inspo3">
+</section>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}RSVP{% endblock %}
+{% block content %}
+<section class="rsvp-form">
+    <h2>RSVP 💌</h2>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <select name="response" required>
+            <option value="" disabled selected>Will you be attending?</option>
+            <option value="Yes">Yes, can't wait!</option>
+            <option value="No">Sorry, can't make it</option>
+            <option value="Maybe">Maybe, I'll let you know</option>
+        </select>
+        <br>
+        <button type="submit">Submit RSVP</button>
+    </form>
+
+    {% if name and response %}
+        <div class="confirmation">
+            Thanks {{ name }}! Your RSVP ("{{ response }}") has been received 💌
+        </div>
+    {% endif %}
+</section>
+{% endblock %}
