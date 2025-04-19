@@ -3,90 +3,20 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff8f8;
+    background-color: #052c5a
+
+    ;
 }
 
 main {
     padding: 20px;
 }
 
-/* Base styles for navbar */
-.navbar {
-    background-color: #ffe0e0;
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-.navbar .logo {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #444;
-    font-weight: bold;
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: background-color 0.2s ease-in-out;
-}
-
-/* Styling for the hamburger menu */
-.menu-icon {
-    display: none; /* Hide it by default */
-    font-size: 2em;
-    cursor: pointer;
-}
-
-.nav-links {
-    display: flex;
-    gap: 15px;
-}
-
-.nav-links a {
-    padding: 8px 12px;
-}
-
-.nav-links.active {
-    display: block;
-}
-
-/* Mobile Styles */
-@media (max-width: 600px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 60px; /* Place below navbar */
-        right: 0;
-        background-color: #ffe0e0;
-        padding: 10px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .menu-icon {
-        display: block; /* Show the hamburger menu icon on mobile */
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 10px;
-        border-top: 1px solid #ddd;
-    }
-
-    .nav-links a:hover {
-        background-color: #ffd0d0;
-    }
-}
-
 
 /* Banner Image */
 .invitation-banner img {
     width: 100%;
-    height: auto;
+    height: 60vh;
     display: block;
     object-fit: cover;
     align-items: center;
@@ -95,7 +25,7 @@ main {
 /* Invitation Details */
 .invitation-details {
     padding: 20px;
-    background-color: #06356c;
+    background-color: #152744;
     text-align: center;
     font-size: 1.1em;
 }

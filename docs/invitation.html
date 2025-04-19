@@ -2,11 +2,34 @@
 {% block title %}You're Invited!{% endblock %}
 {% block content %}
 <section class="invitation-banner">
-    <img src="/static/images/invitation_banner.png" alt="You're Invited!">
+    <img src="/static/images/plain_banner.png" alt="You're Invited!">
 </section>
-<section class="invitation-details">
-    <p>Join us for an unforgettable night of fun, food, and friends.</p>
-    <p><strong>When:</strong> Saturday, May 18th at 7:00 PM</p>
-    <p><strong>Where:</strong> 123 Party Lane, Celebration City</p>
+
+<section class="gallery">
+    <h2>Inspiration Vibes ✨</h2>
+    <img src="{{ url_for('static', filename='images/inspo1.jpg') }}" alt="inspo1">
+    <img src="{{ url_for('static', filename='images/inspo2.jpg') }}" alt="inspo2">
+    <img src="{{ url_for('static', filename='images/inspo3.jpg') }}" alt="inspo3">
+</section>
+
+<section class="rsvp-form">
+    <h2>RSVP 💌</h2>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <select name="response" required>
+            <option value="" disabled selected>Will you be attending?</option>
+            <option value="Yes">Yes, can't wait!</option>
+            <option value="No">Sorry, can't make it</option>
+            <option value="Maybe">Maybe, I'll let you know</option>
+        </select>
+        <br>
+        <button type="submit">Submit RSVP</button>
+    </form>
+
+    {% if name and response %}
+        <div class="confirmation">
+            Thanks {{ name }}! Your RSVP ("{{ response }}") has been received 💌
+        </div>
+    {% endif %}
 </section>
 {% endblock %}
